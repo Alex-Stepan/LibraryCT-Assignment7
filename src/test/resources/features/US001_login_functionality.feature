@@ -5,8 +5,10 @@ Feature: US_001 Login Functionality
   User Story: Login Functionality
   Accounts: Librarian, Student
 
+
   Background:
     Given  user is on the Login_Library page
+
 
   #  1. Librarian credentials verification
   @us001_T01
@@ -62,6 +64,7 @@ Feature: US_001 Login Functionality
           | Student1   |
           | Student2   |
 
+
   # 6. Login with wrong username and wrong password
   @us001_t06
   Scenario: US001_T06_Login_with_wrongUsername_wrongPassword
@@ -78,7 +81,7 @@ Feature: US_001 Login Functionality
 
   # 8. Login with parameters
   @us001_t08
-  Scenario: US001_T08_Loged_with_parameters
+  Scenario: US001_T08_Logged_with_parameters
     When  user input NULL username with NULL password
     Then  user should see warning message <This field is required.>
 
